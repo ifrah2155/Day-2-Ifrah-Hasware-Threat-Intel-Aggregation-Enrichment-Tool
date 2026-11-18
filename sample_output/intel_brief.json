@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "generated": "2026-11-18T14:29:12Z",
+    "mode": "offline-snapshot",
+    "input": "sample_input/iocs.txt"
+  },
+  "sources": {
+    "feodo": {
+      "ok": true,
+      "records": 1,
+      "source": "offline snapshot (synthetic)",
+      "fetched": "2026-11-18T14:29:12Z"
+    },
+    "threatfox": {
+      "ok": true,
+      "records": 2,
+      "source": "offline snapshot (synthetic)",
+      "fetched": "2026-11-18T14:29:12Z"
+    },
+    "bazaar": {
+      "ok": true,
+      "records": 1,
+      "source": "offline snapshot (synthetic)",
+      "fetched": "2026-11-18T14:29:12Z"
+    }
+  },
+  "results": [
+    {
+      "type": "domain",
+      "value": "update-check.evil-cdn.example.com",
+      "hits": [
+        {
+          "source": "ThreatFox",
+          "detail": "payload_delivery / AgentTesla (confidence 90)"
+        }
+      ],
+      "rdap": {
+        "registered": "2026-11-08T00:00:00Z",
+        "age_days": 10
+      },
+      "score": 91,
+      "verdict": "malicious",
+      "tags": [
+        "agenttesla",
+        "newly-registered",
+        "payload_delivery",
+        "stealer"
+      ],
+      "first_seen": "2026-11-14 12:00:00",
+      "last_seen": "2026-11-17 09:30:00",
+      "notes": [
+        "domain only 10 days old"
+      ]
+    },
+    {
+      "type": "ipv4",
+      "value": "198.51.100.23",
+      "hits": [
+        {
+          "source": "ThreatFox",
+          "detail": "botnet_cc / QakBot (confidence 75)"
+        }
+      ],
+      "geo_asn": {
+        "country": "Exampleland",
+        "as": "AS64501 EXAMPLE-NET",
+        "org": "Example VPS",
+        "hosting": true,
+        "proxy": true
+      },
+      "score": 75,
+      "verdict": "malicious",
+      "tags": [
+        "botnet_cc",
+        "c2",
+        "hosting-provider",
+        "proxy/vpn/tor",
+        "qakbot"
+      ],
+      "first_seen": "2026-11-10 08:15:22",
+      "last_seen": "2026-11-17 02:00:00",
+      "notes": []
+    },
+    {
+      "type": "ipv4",
+      "value": "203.0.113.10",
+      "hits": [
+        {
+          "source": "Feodo Tracker",
+          "detail": "botnet C2 (Emotet), status=online, port=443"
+        }
+      ],
+      "geo_asn": {
+        "country": "Exampleland",
+        "as": "AS64500 EXAMPLE-AS",
+        "org": "Example Hosting",
+        "hosting": true,
+        "proxy": false
+      },
+      "score": 70,
+      "verdict": "malicious",
+      "tags": [
+        "botnet-c2",
+        "emotet",
+        "hosting-provider"
+      ],
+      "first_seen": "2026-10-02 06:11:00",
+      "last_seen": "2026-11-16",
+      "notes": []
+    },
+    {
+      "type": "sha256",
+      "value": "f458751657fb3d878dd9a8d0cd7ca6262a01b899f5ef1c92fd45cbba0502d190",
+      "hits": [
+        {
+          "source": "MalwareBazaar",
+          "detail": "SHA256 in recent malware-sample export"
+        }
+      ],
+      "score": 60,
+      "verdict": "suspicious",
+      "tags": [
+        "malware-sample"
+      ],
+      "first_seen": null,
+      "last_seen": null,
+      "notes": []
+    },
+    {
+      "type": "domain",
+      "value": "login-portal-secure.example.net",
+      "hits": [],
+      "rdap": {
+        "registered": "2026-10-01T00:00:00Z",
+        "age_days": 48
+      },
+      "score": 0,
+      "verdict": "no-detection",
+      "tags": [],
+      "first_seen": null,
+      "last_seen": null,
+      "notes": []
+    },
+    {
+      "type": "domain",
+      "value": "old-benign-site.example.org",
+      "hits": [],
+      "rdap": {
+        "registered": "2009-03-14T00:00:00Z",
+        "age_days": 6458
+      },
+      "score": 0,
+      "verdict": "no-detection",
+      "tags": [],
+      "first_seen": null,
+      "last_seen": null,
+      "notes": []
+    },
+    {
+      "type": "sha256",
+      "value": "3ffe50f75128a7800a50b81ba1ca1021910606c65cd7bdef5b5331a5b3f2da44",
+      "hits": [],
+      "score": 0,
+      "verdict": "no-detection",
+      "tags": [],
+      "first_seen": null,
+      "last_seen": null,
+      "notes": []
+    },
+    {
+      "type": "md5",
+      "value": "c6732372061de8b1c3e8e45f855eff43",
+      "hits": [],
+      "score": 0,
+      "verdict": "no-detection",
+      "tags": [],
+      "first_seen": null,
+      "last_seen": null,
+      "notes": [
+        "feeds used index SHA256 only - hash not checked (see Limitations)"
+      ]
+    },
+    {
+      "type": "ipv4",
+      "value": "8.8.8.8",
+      "hits": [],
+      "geo_asn": {
+        "country": "United States",
+        "as": "AS15169 Google LLC",
+        "org": "Google Public DNS",
+        "hosting": true,
+        "proxy": false
+      },
+      "score": 0,
+      "verdict": "no-detection",
+      "tags": [
+        "hosting-provider"
+      ],
+      "first_seen": null,
+      "last_seen": null,
+      "notes": []
+    }
+  ],
+  "skipped": [
+    {
+      "type": "ipv4",
+      "value": "10.0.0.5",
+      "reason": "non-public address (private/reserved/loopback) - not looked up"
+    }
+  ],
+  "rejected": [
+    {
+      "line": 13,
+      "value": "not_an_ioc!!",
+      "reason": "unrecognised IOC format"
+    }
+  ]
+}
