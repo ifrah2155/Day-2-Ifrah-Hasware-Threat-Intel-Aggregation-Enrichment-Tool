@@ -1,4 +1,4 @@
-# Day 2 Mission Threat Intel Aggregation & Enrichment Tool
+# Day 2 Mission - Ifrah Hasware- Threat Intel Aggregation & Enrichment Working Tool
 
 - Tool name: `ti_enrich.py` (Threat-Intel IOC Aggregation & Enrichment)
 - Time spent: 4 Hrs
