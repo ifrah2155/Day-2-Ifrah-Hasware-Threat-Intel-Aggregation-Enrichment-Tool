@@ -1,4 +1,4 @@
-# Day 2 Mission - <Candidate Name> - <Track> - Working Tool
+# Day 2 Mission Threat Intel Aggregation & Enrichment Tool
 
 - Tool name: `ti_enrich.py` (Threat-Intel IOC Aggregation & Enrichment)
 - Time spent: 4 Hrs
